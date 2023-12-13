@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 export default function Welcome() {
-  const [userName, setUserName] = useState("");
+  const [username, Setusername] = useState("");
   useEffect(async () => {
-    setUserName(
+    Setusername(
       await JSON.parse(
         localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
-      ).username
+      )
     );
   }, []);
   return (
     <Container>
       <h1>
-        Welcome, <span>{userName}!</span>
+        Welcome, <span>{username}</span>
       </h1>
       <h3>Please select a chat to Start messaging.</h3>
     </Container>

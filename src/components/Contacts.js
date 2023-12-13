@@ -2,15 +2,15 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 export default function Contacts({ contacts, changeChat }) {
-  const [currentUserName, setCurrentUserName] = useState(undefined);
-  const [currentUserImage, setCurrentUserImage] = useState(undefined);
-  const [currentSelected, setCurrentSelected] = useState(undefined);
+  const [currentUserName, setCurrentUserName] = useState("");
+  const [currentUserImage, setCurrentUserImage] = useState("");
+  const [currentSelected, setCurrentSelected] = useState("");
   useEffect(async () => {
     const data = await JSON.parse(
       localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY)
     );
-    setCurrentUserName(data.username);
-    setCurrentUserImage(data.avatarImage);
+    setCurrentUserName(data);
+    setCurrentUserImage(data);
   }, []);
   const changeCurrentChat = (index, contact) => {
     setCurrentSelected(index);
