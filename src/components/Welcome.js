@@ -19,6 +19,7 @@ export default function Welcome() {
   );
 }
 
+
 const Container = styled.div`
   display: flex;
   justify-content: center;
