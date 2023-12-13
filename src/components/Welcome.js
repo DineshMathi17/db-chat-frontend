@@ -12,7 +12,7 @@ export default function Welcome() {
   return (
     <Container>
       <h1>
-        Welcome, <span>{username}</span>
+        Welcome, <span>{username}!</span>
       </h1>
       <h3>Please select a chat to Start messaging.</h3>
     </Container>
