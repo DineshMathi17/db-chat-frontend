@@ -24,7 +24,7 @@ export default function SetAvatar() {
 
   useEffect(async () => {
     if (!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))
-      navigate("/chat");
+      navigate("/");
   }, []);
 
   const setProfilePicture = async () => {
